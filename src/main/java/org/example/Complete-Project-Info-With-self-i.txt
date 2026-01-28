@@ -1,0 +1,234 @@
+##Complete Project Info With self introduction 
+
+
+-> Hi my self I'm Punnam Jitendra. Basically I'm from the Nuzvid Andra Pradesh. Currently I'm staying in Ahmedabad Gujarat.
+
+-> I'm Having 3+ years of experience As a Test Engineer With Tech Mahindra, With a strong passion to deliver high quality software product
+
+-> I have developed expertise in identifying and reporting the bugs for the seamless user experience 
+
+
+Key Skill Set is:
+
+-> Manual Testing 
+
+-> Web Automation 
+
+-> Java Programming 
+
+-> Git Lab for Code Storage 
+
+-> API Manual testing 
+
+-> Strong Knowledge in API Automation Testing 
+
+-> API Testing 
+
+-> Defect identification, Reporting and tracking.
+
+
+## Explain your Project 
+
+
+Currently I'm working for the client Reality Labs it is a research and development unit in Meta that focuses on creating innovative technologies to enhance human connection, creativity, and productivity
+
+
+
+Key Areas Focusing On: 
+
+- Virtual Reality (VR): Developing immersive VR experiences that simulate real-world environments, revolutionizing entertainment, education, and social interactions.
+
+- Augmented Reality (AR): Is a technology that overlays digitally-created content onto the user's real-world environment. Examples Snapchat and Instagram Filters 
+
+- Mixed Reality (MR): It is the combination of both VR and AR Technologies
+
+- In These among three i have working on Virtual Reality Technologies. 
+
+- In VR tech we are doing the VR device testing with the Android Software that was build by Meta.
+
+
+We are parallelly work with 3 three different Android builds 
+
+-> Mian build
+
+-> Release build 
+
+-> Production build
+
+
+In Every Month on the date of 12 Branch cut Happens. i.e. Mian goes to -> RC -> Prod -> Prod goes to End User And Latest build was in Mian. 
+
+
+I'm working on a team called as Shell SDK --> in this we have 3 pillars
+
+1. SDK Integration
+
+2. SDK Documentation 
+
+3. Rocksteady
+
+4. Twilight Mobile App Testing 
+
+
+
+Rocksteady/Developer Dash Board 
+
+
+
+
+i have working on the web application called Rocksteady which is internally called as Meta Quest Developer Dashboard.
+
+- > it is used by developers to manage their applications on the Meta Quest platform called Store  like play store and app store we have meta Quest Store in Quest Devices.
+
+In which we have the modulus/Features Like 
+
+--> APP OverView consists of 
+	
+	- Provide information about you
+	- Self-certify your app's age group
+	- Configure sharing your app's content
+	- Include your app's Privacy Policy
+	- Upload your app build
+	- Set your app's listing and price
+	- Submit your app for review
+
+And We have remaining like 
+
+--> Development - Build Your App
+
+
+	- Unique API Id
+
+
+
+--> Distribution - Get feedback and release
+
+	- We can manage release channels for Alpha and Beta Testing's
+	- we can Manage different versions of Application
+	- App Submisions
+	
+--> Growth - to Acquire the more Users
+
+	- By using Ads
+	- Try before You Buy
+	- Promotions 
+
+--> Engagement - To Retain the existing users
+
+	- To send the notifications about app
+	- User reviews
+	- User Reporting 
+	- Events
+
+--> Monitization - Increase the Revenue	
+ 
+	- Add ons	
+	- Subscriptions 
+
+--> Analytics - View your Data 
+
+	- OverView of App
+	- Revenue
+	- Subscriptions
+	- User Engagement 
+
+
+In SDK integration
+
+--> to develop application we need some SDK's nothing but the Software Development Kits.
+
+--> Meta Provides the various SDK's to develop the VR application's 
+
+--> The SDK's are most probably like Audio, Interaction, Movement and many more SDK's 
+
+--> Each SDK have their own functionality's.
+
+--> TO Build the VR applications meta uses the Unity Engine and Unreal Engine.
+
+--> Before VR And AR technologies invented these engines are used to develop the games.
+
+--> Here we test the Meta SDK's are properly working or with the third party game engine tools like Unity and Unreal.
+
+--> After integrating the Meta SDK's with third party game engine tools we are generating the Demo APK's for each and SDK.
+
+--> After generating APK's we are deploying the APK's in VR devices by using ADB Commands.
+
+--> We are performing the Cross platform testing also to check the functionality of SDK's in Mac(silicon Chip) and Window with Unity and Unreal Engines
+
+--> After deploying the APK's we are going to test the functionality of Each and Every APK.
+
+
+
+SDK Documentation
+
+-> These are the Public documentation sites available for Meta Developers.
+
+-> In earlier we are discuss about various SDK'S
+
+-> In these sites we have Documentation for each and every SDK for each and every game engine.
+
+-> These documents are helps to developers how to use SDK's efficiently while in developing the VR Games/Appication.
+
+-> In this we are checking the UI of the Documentation.
+
+-> in this we are testing the website with Cross Browser Testing 
+
+
+
+Roles and Responsibilities 
+
+- > We are performing the BVT - Basic Verification Test for Specific builds is like the Smoke testing to check the Critical functionality of Application and after we have Documented the results.
+
+-> After completing the BVT We have checked the Pending verifications. the Bugs raised earlier
+
+	-> if any issue have a fix we can retest the particular issue, 
+		
+		-> if issue is fix we Adding the appropriate tags and marks the status of defect is closed with graceful message 
+	 
+		-> if we are still able to repro the issue Again we are taking the logs and attachments of issue and assign back to Developer
+
+-> After we are spending 2-3 quality time to spent on Ad hoc testing to find the bugs.
+
+-> After doing all the things We have setup our test environment with required software and devices to run the run the test pass
+
+-> End of the day we file bugs found in Test cases and Ad hoc testing.
+
+-> And Preparing the clear Document for whole day work for weekly and monthly reports.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,425 @@
+//Prints the String 
+
+
+class Main {
+    public static void main(String[] args) {
+        
+        String s = "Java";
+        
+        System.out.println(s);
+    }
+}
+
+
+Java
+
+=== Code Execution Successful ===
+
+
+
+
+//Reverse the String 
+
+
+class Main {
+    public static void main(String[] args) {
+        
+        String s = "Java";
+        
+        String s1="";
+        
+        for(int i=0;i<s.length();i++){
+            
+            char ch = s.charAt(i);
+            
+            s1 = ch+s1;
+        }
+        
+        System.out.println(s1);
+    }
+}
+
+
+
+avaJ
+
+=== Code Execution Successful ===
+
+
+
+//Count the digits, characters and symbols 
+
+
+class Main {
+    public static void main(String[] args) {
+        
+        String s = "Java@13425!5$";
+        
+        s=s.toLowerCase();
+        
+        int  charCount = 0;
+        int digitCount = 0;
+        int specialCount = 0;
+        
+        for(int i=0;i<s.length();i++){
+            
+            char ch = s.charAt(i);
+            
+            if(ch >= 'a' && ch <= 'z'){
+                
+                System.out.println("Charaters are "+ch);
+                charCount++;
+            }
+            else if(ch >= '0' && ch <= '9'){
+                
+                System.out.println("Digits are "+ch);
+                digitCount++;
+                
+            }
+            else {
+                
+                System.out.println("specialCharacters are "+ch);
+                specialCount++;
+                
+            }
+        }
+                System.out.println();
+
+        System.out.println("characters count is :"+charCount);
+        System.out.println("Digits count is :"+digitCount);
+        System.out.println("specialsCharacters  count is :"+specialCount);
+        
+    }
+}
+
+
+Charaters are j
+Charaters are a
+Charaters are v
+Charaters are a
+specialCharacters are @
+Digits are 1
+Digits are 3
+Digits are 4
+Digits are 2
+Digits are 5
+specialCharacters are !
+Digits are 5
+specialCharacters are $
+
+characters count is :4
+Digits count is :6
+specialsCharacters  count is :3
+
+=== Code Execution Successful ===
+
+
+
+
+//Remove Special Charcaters and digits from the string 
+
+
+class Main {
+    public static void main(String[] args) {
+        
+        String s = "Java@13425!5$";
+        
+        String s1 = "";
+       
+        for(int i=0;i<s.length();i++){
+            
+            char ch = s.charAt(i);
+            
+            if(Character.isLetter(ch)){
+                
+                s1 = s1+ch;
+            }
+            
+        }
+        System.out.println(s1);
+    }
+}
+
+
+
+java
+
+=== Code Execution Successful ===
+
+
+
+
+//Remove Duplicates from the String 
+
+
+class Main {
+    public static void main(String[] args) {
+        
+        String s = "Java";
+        
+        s = s.toLowerCase();
+        
+        String s1 = "";
+        
+        for(int i=0;i<s.length();i++){
+            int count=0;
+            for(int j = i+1; j<s.length();j++){
+                
+                if(s.charAt(i)==s.charAt(j)){
+                    count++;
+                    
+                }
+            }
+            if(count == 0 )
+            s1 =s1+s.charAt(i);
+        }
+        System.out.println(s1);
+    }
+}
+
+
+jva
+
+=== Code Execution Successful ===
+
+
+
+
+//Contains using ---> one string is in another string or not  
+
+
+class Main {
+    public static void main(String[] args) {
+        
+        String s = "Java";
+        String s1 = "av";
+        System.out.println(s.contains(s1));
+    }
+}
+
+
+true
+
+=== Code Execution Successful ===
+
+
+
+//substring()--------------------> Returns a new string which is the substring of a specified string
+
+
+class Main {
+    public static void main(String[] args) {
+        
+    String s = "Java";
+       
+       String s1 =s.substring(2);
+       
+       System.out.println(s1);
+       
+       
+    }
+}
+
+
+va
+
+=== Code Execution Successful ===
+
+
+
+
+//Remove duplicates from string in a Correct order
+
+class Main {
+    public static void main(String[] args) {
+        
+        String s = "Java";
+        
+        s = s.toLowerCase();
+        
+        String s1 = "";
+        
+        for(int i=0;i<s.length();i++){
+            int count=0;
+            for(int j = i; j>=0;j--){
+                
+                if(s.charAt(i)==s.charAt(j)){
+                    count++;
+                    
+                }
+            }
+            if(count == 1 )
+            s1 =s1+s.charAt(i);
+        }
+        System.out.println(s1);
+    }
+}
+
+
+jav
+
+=== Code Execution Successful ===
+
+
+
+
+//Count the occurence of each character in a given string 
+
+class Main {
+    public static void main(String[] args) {
+        
+        String s = "Java";
+        
+        s = s.toLowerCase();
+        
+        String s1 = "";
+        
+        for(int i=0;i<s.length();i++){
+            int count=0;
+            for(int j = i; j>=0;j--){
+                
+                if(s.charAt(i)==s.charAt(j)){
+                    count++;
+                    
+                }
+            }
+            if(count == 1 )
+            s1 =s1+s.charAt(i);
+        }
+        System.out.println(s1);
+        
+        
+        
+        for(int i=0; i<s1.length();i++){
+            
+            int count=0;
+            
+            for(int j=0; j<s.length();j++){
+                
+                if(s1.charAt(i) == s.charAt(j)){
+                    count++;
+                }
+            }
+            
+            System.out.println(s1.charAt(i)+" occures : "+count +" times");
+        }
+    }
+}
+
+
+
+jav
+
+
+j occures : 1 times
+a occures : 2 times
+v occures : 1 times
+
+=== Code Execution Successful ===
+
+
+
+
+//Count the occurence of Single character in a given string 
+
+class Main {
+    public static void main(String[] args) {
+        
+        String s = "Java is a Greate";
+        
+        s = s.toLowerCase();
+        
+        char ch = 'a';
+        
+        int count=0;
+        
+        for(int i=0; i<s.length();i++){
+            
+            if(ch==s.charAt(i)){
+                count++;
+            }
+        }
+        
+        System.out.println(ch+" repeats the "+count+" times");
+        
+      
+    }
+}
+
+
+a repeats the 4 times
+
+=== Code Execution Successful ===
+
+
+
+
+//input = Java css
+//output = ssc avaJ
+
+class Main {
+    public static void main(String[] args) {
+        
+        String s = "Java css";
+        
+       String[] a = s.split(" ");
+       
+       String sum = "";
+       
+       for(int i=0; i<a.length; i++){
+           
+           sum = rev(a[i])+" "+sum;
+       }
+        System.out.println(sum);
+    }
+    
+    public static String rev(String s ){
+        
+        String s1="";
+        
+        for(int i=0;i<s.length();i++){
+            
+            char ch = s.charAt(i);
+            
+            s1 = ch+s1;
+        }
+        
+        return s1;
+        
+    }
+}
+
+
+
+ssc avaJ 
+
+=== Code Execution Successful ===
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

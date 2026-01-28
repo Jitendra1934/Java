@@ -1,0 +1,458 @@
+##Number Series Programs 
+
+
+class Main {
+    public static void main(String[] args) {
+        
+    int a=10,b=10;
+    
+    System.out.println(a+b);
+    }
+}
+
+op = 20
+
+//fibanocci series
+
+class Main {
+    public static void main(String[] args) {
+        
+    int a=0,b=1,c;
+
+            System.out.print(a+" ");
+            System.out.print(b+" ");
+    
+        while(true){
+            c = a+b;
+            if(c<100){
+                System.out.print(c+" ");
+            }
+            else 
+                break;
+            a=b;
+            b=c;
+            
+        }
+    }
+}
+
+O/P:
+
+0 1 1 2 3 5 8 13 21 34 55 89 
+=== Code Execution Successful ===
+
+
+
+
+
+//find the individual numbers from a number
+
+class Main {
+    public static void main(String[] args) {
+        
+    int n = 1234, rem;
+    
+        while(n>0){
+            
+            rem = n%10;
+            
+            System.out.println(rem);
+            
+            n = n/10;
+            
+        }
+    }
+}
+
+
+O/P:
+
+4
+3
+2
+1
+
+=== Code Execution Successful ===
+
+
+
+
+//find the Sum of the given number 
+
+class Main {
+    public static void main(String[] args) {
+        
+    int n = 1234, rem, sum= 0;
+    
+        while(n>0){
+            
+            rem = n%10;
+            
+            sum = sum+rem;
+            
+            n = n/10;
+            
+        }
+        
+        System.out.println(sum);
+    }
+}
+
+10
+
+=== Code Execution Successful ===
+
+
+
+
+//find the product/mutiplication of the given number 
+
+class Main {
+    public static void main(String[] args) {
+        
+    int n = 1234, rem, prod= 1;
+    
+        while(n>0){
+            
+            rem = n%10;
+            
+            prod = prod*rem;
+            
+            n = n/10;
+            
+        }
+        
+        System.out.println(prod);
+    }
+}
+
+24
+
+=== Code Execution Successful ===
+
+
+
+
+//find the reverse of the given number 
+
+class Main {
+    public static void main(String[] args) {
+        
+    int n = 1234, rem, rev= 0;
+    
+        while(n>0){
+            
+            rem = n%10;
+            
+            rev = rev*10+rem;
+            
+            n = n/10;
+            
+        }
+        
+        System.out.println(rev);
+    }
+}
+
+O/p: 
+
+4321
+
+=== Code Execution Successful ===
+
+
+
+
+//Palindrome Number
+
+class Main {
+    public static void main(String[] args) {
+        
+    int n = 4341, rem, rev= 0, temp =n;
+    
+        while(n>0){
+            
+            rem = n%10;
+            
+            rev = rev*10+rem;
+            
+            n = n/10;
+            
+        }
+        
+        
+       if(temp==rev){
+           
+        System.out.println(temp+" is a palindrome Number");
+           
+       }
+       else 
+        System.out.println(temp+" not a is a palindrome Number");
+    }
+}
+
+4341 not a is a palindrome Number
+
+=== Code Execution Successful ===
+
+
+
+
+//Amstrong Number
+
+class Main {
+    public static void main(String[] args) {
+        
+    int n = 15, rem, sum= 0, temp =n;
+    
+        while(n>0){
+            
+            rem = n%10;
+            
+            sum = sum+rem*rem*rem;
+            
+            n = n/10;
+            
+        }
+        
+       if(temp==sum){
+           
+        System.out.println(temp+" is a Amstrong Number");
+           
+       }
+       else 
+        System.out.println(temp+" not a is a Amstrong Number");
+    }
+}
+
+
+15 not a is a Amstrong Number
+
+=== Code Execution Successful ===
+
+
+
+
+
+//Strong  Number
+
+class Main {
+    public static void main(String[] args) {
+
+    int n = 145, temp=n,rem, sum=0;
+    
+        while(n>0){
+            
+        rem = n%10;
+        
+        sum = sum+fact(rem);
+        
+        n=n/10;
+        }
+        
+        if(temp == sum){
+        System.out.println(temp+ " is a Strong Number");
+         }
+        else
+             System.out.println(temp+ " is not a Strong Number");
+    }
+    
+    public static int  fact(int n){
+        
+        int fact =1;
+        
+        for(int i = 1; i<=n; i++){
+            
+            fact = fact*i;
+        }
+        
+        return fact;
+    }
+}
+
+
+145 is a Strong Number
+
+=== Code Execution Successful ===
+
+
+
+//Prime number
+
+class Main {
+    public static void main(String[] args) {
+        
+        int n =13;
+        int count = 0;
+        for (int i = 2; i<=n/2; i++){
+            
+            if(n%i == 0){
+                count++;
+            }
+        }
+        if(count == 0 )
+            System.out.println(n+" is a Prime number");
+        else 
+            System.out.println(n+" is not Prime number");
+    }
+}
+
+
+13 is a Prime number
+
+=== Code Execution Successful ===
+
+
+//Prime number with in the given Range 
+
+class Main {
+    public static void main(String[] args) {
+        
+       for (int n = 2; n<=100; n++)  {
+            int count = 0;
+            for (int i = 2; i<=n/2; i++){
+            
+            if(n%i == 0){
+                count++;
+            }
+        }
+        if(count == 0 )
+            System.out.println(n+" is a Prime number");
+       /* else 
+            System.out.println(n+" is not Prime number");*/
+       }
+    }
+}
+
+2 is a Prime number
+3 is a Prime number
+5 is a Prime number
+7 is a Prime number
+11 is a Prime number
+13 is a Prime number
+17 is a Prime number
+19 is a Prime number
+23 is a Prime number
+29 is a Prime number
+31 is a Prime number
+37 is a Prime number
+41 is a Prime number
+43 is a Prime number
+47 is a Prime number
+53 is a Prime number
+59 is a Prime number
+61 is a Prime number
+67 is a Prime number
+71 is a Prime number
+73 is a Prime number
+79 is a Prime number
+83 is a Prime number
+89 is a Prime number
+97 is a Prime number
+
+=== Code Execution Successful ===
+
+
+
+//Sum of Prime number with in the given Range 
+
+class Main {
+    public static void main(String[] args) {
+        int sum = 0;
+       for (int n = 2; n<=100; n++)  {
+            int count = 0;
+            for (int i = 2; i<=n/2; i++){
+            
+            if(n%i == 0){
+                count++;
+            }
+        }
+         if(count == 0){
+                sum = sum + n;
+            }
+       }
+       System.out.println(sum);
+    }
+}
+
+
+1060
+
+=== Code Execution Successful ===
+
+
+//Sum of Prime number with in the given Range 
+
+class Main {
+    public static void main(String[] args) {
+       
+       int a =10, b = 20;
+       
+       System.out.println("before Swap "+a);
+       System.out.println("before Swap "+b);
+       
+              System.out.println();
+
+       
+       a = a+b;
+       b = a-b;
+       a = a-b;
+       
+       System.out.println("After Swap "+a);
+       System.out.println("After Swap "+b);
+       
+    }
+}
+
+
+
+
+before Swap 10
+before Swap 20
+
+After Swap 20
+After Swap 10
+
+=== Code Execution Successful ===
+
+
+//Sum of Prime number with in the given Range 
+
+class Main {
+    public static void main(String[] args) {
+       
+       int a =10, b = 20, temp;
+       
+       System.out.println("before Swap "+a);
+       System.out.println("before Swap "+b);
+       System.out.println();
+       
+       temp = a;
+       a=b;
+       b=temp;
+       
+ 
+       System.out.println("After Swap "+a);
+       System.out.println("After Swap "+b);
+       
+    }
+}
+
+
+before Swap 10
+before Swap 20
+
+After Swap 20
+After Swap 10
+
+=== Code Execution Successful ===
+
+
+
+
+
+
+
+
+
+

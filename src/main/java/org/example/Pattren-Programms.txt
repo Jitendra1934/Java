@@ -1,0 +1,454 @@
+##Pattren Programms
+
+class Main {
+    public static void main(String[] args) {
+        
+        int s =0;
+        
+        for(int i=1;i<=5;i++){
+            
+            s++;
+            
+            for (int j=1;j<=s;j++){
+                
+                System.out.print("*");
+            }
+             System.out.println();
+
+        }
+    }
+}
+
+
+O/P:
+
+*
+**
+***
+****
+*****
+
+
+
+
+class Main {
+    public static void main(String[] args) {
+        
+        int s =0;
+        int sp=5;
+        for(int i=1;i<=5;i++){
+            
+            s++;
+            sp--;
+            for (int k=1;k<=sp;k++){
+                
+                System.out.print(" ");
+            }
+            for (int j=1;j<=s;j++){
+                
+                System.out.print("*");
+            }
+             System.out.println();
+
+        }
+    }
+}
+
+
+O/P:
+
+    *
+   **
+  ***
+ ****
+*****	
+
+
+
+class Main {
+    public static void main(String[] args) {
+        
+        int s =-1;
+        int sp=5;
+        for(int i=1;i<=5;i++){
+            
+            s+=2;
+            sp--;
+            for (int k=1;k<=sp;k++){
+                
+                System.out.print(" ");
+            }
+            for (int j=1;j<=s;j++){
+                
+                System.out.print("*");
+            }
+             System.out.println();
+        }
+    }
+}
+
+
+O/P:
+
+    *
+   ***
+  *****
+ *******
+*********
+
+
+class Main {
+    public static void main(String[] args) {
+        
+        int s =0;
+        int sp=5;
+        for(int i=1;i<=5;i++){
+            
+            s++;
+            sp--;
+            for (int k=1;k<=sp;k++){
+                
+                System.out.print(" ");
+            }
+            for (int j=1;j<=s;j++){
+                
+                System.out.print(" *");
+            }
+             System.out.println();
+        }
+    }
+}
+
+
+O/P: 
+
+     *
+    * *
+   * * *
+  * * * *
+ * * * * *
+
+
+class Main {
+    public static void main(String[] args) {
+        
+        int s =0;
+        int sp=5;
+        for(int i=1;i<=9;i++){
+            
+           if(i<=5){
+               s++;
+               sp--;
+           }
+           else{
+               s--;
+               sp++;
+           }
+            for (int k=1;k<=sp;k++){
+                
+                System.out.print(" ");
+            }
+            for (int j=1;j<=s;j++){
+                
+                System.out.print(" *");
+            }
+             System.out.println();
+        }
+    }
+}
+
+O/P:
+
+     *
+    * *
+   * * *
+  * * * *
+ * * * * *
+  * * * *
+   * * *
+    * *
+     *
+
+
+
+class Main {
+    public static void main(String[] args) {
+        
+        int s =0;
+        int sp=5;
+        for(int i=1;i<=9;i++){
+            
+           if(i<=5){
+               s++;
+               sp--;
+           }
+           else{
+               s--;
+               sp++;
+           }
+            for (int k=1;k<=sp;k++){
+                
+                System.out.print(" ");
+            }
+            for (int j=1;j<=s;j++){
+                
+                System.out.print("*");
+            }
+             System.out.println();
+        }
+    }
+}
+
+O/P:
+
+
+    *
+   **
+  ***
+ ****
+*****
+ ****
+  ***
+   **
+    *
+
+
+
+class Main {
+    public static void main(String[] args) {
+        
+        int s =-1;
+        int sp=5;
+        for(int i=1;i<=9;i++){
+            
+           if(i<=5){
+               s+=2;
+               sp--;
+           }
+           else{
+               s-=2;
+               sp++;
+           }
+            for (int k=1;k<=sp;k++){
+                
+                System.out.print(" ");
+            }
+            for (int j=1;j<=s;j++){
+                
+                System.out.print("*");
+            }
+             System.out.println();
+        }
+    }
+}
+
+O/P:
+
+    *
+   ***
+  *****
+ *******
+*********
+ *******
+  *****
+   ***
+    *
+
+class Main {
+    public static void main(String[] args) {
+        
+        int s =0;
+        for(int i=1;i<=9;i++){
+            
+           if(i<=5){
+               s++;
+           }
+           else{
+               s--;
+           }
+            /*for (int k=1;k<=sp;k++){
+                
+                System.out.print(" ");
+            }*/
+            for (int j=1;j<=s;j++){
+                
+                System.out.print("*");
+            }
+             System.out.println();
+        }
+    }
+}
+
+O/P:
+
+*
+**
+***
+****
+*****
+****
+***
+**
+*
+
+
+class Main {
+    public static void main(String[] args) {
+        
+        for(int i =1; i<=4;i++){
+            
+            for (int j =1; j<=4; j++){
+                
+                if((i==2&&j==2)||(i==3&&j==2)||(i==2&&j==3)||(i==3&&j==3)){
+                    System.out.print(" ");
+                }
+                else
+                    System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+O/P:
+
+****
+*  *
+*  *
+****
+
+class Main {
+    public static void main(String[] args) {
+        
+        int n =1;
+        
+        for(int i=1;i<=5;i++){
+            
+            for (int j=1;j<=i;j++){
+                
+                System.out.print(n+" ");
+                n++;
+            }
+             System.out.println();
+
+        }
+    }
+}
+
+O/P:
+
+
+1 
+2 3 
+4 5 6 
+7 8 9 10 
+11 12 13 14 15 
+
+
+
+class Main {
+    public static void main(String[] args) {
+        
+        for(int i=1;i<=5;i++){
+            int n =1;
+            for (int j=1;j<=i;j++){
+                
+                System.out.print(n+" ");
+                n++;
+            }
+             System.out.println();
+
+        }
+    }
+}
+
+
+O/P:
+
+1 
+1 2 
+1 2 3 
+1 2 3 4 
+1 2 3 4 5 
+
+
+class Main {
+    public static void main(String[] args) {
+        
+        for(int i=1;i<=5;i++){
+            int n =1;
+            for (int j=1;j<=i;j++){
+                
+                System.out.print(n*n+" ");
+                n++;
+            }
+             System.out.println();
+
+        }
+    }
+}
+
+O/P:
+
+1 
+1 4 
+1 4 9 
+1 4 9 16 
+1 4 9 16 25 
+
+
+
+class Main {
+    public static void main(String[] args) {
+        
+        for(int i=1;i<=5;i++){
+            char ch ='a';
+            for (int j=1;j<=i;j++){
+                
+                System.out.print(ch+" ");
+                ch++;
+            }
+             System.out.println();
+
+        }
+    }
+}
+
+
+O/p:
+
+a 
+a b 
+a b c 
+a b c d 
+a b c d e
+
+
+
+class Main {
+    public static void main(String[] args) {
+        
+        char ch ='a';
+        
+        for(int i=1;i<=5;i++){
+            
+            for (int j=1;j<=i;j++){
+                
+                System.out.print(ch+" ");
+                ch++;
+            }
+             System.out.println();
+
+        }
+    }
+}
+
+
+O/P:
+
+a 
+b c 
+d e f 
+g h i j 
+k l m n o 

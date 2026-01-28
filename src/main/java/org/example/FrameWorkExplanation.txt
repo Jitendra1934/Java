@@ -1,0 +1,55 @@
+What is Framework
+
+In Automation testing Framework is a structured approach to organize and manage the development and execution of automated tests. 
+
+Benefits of Using Framework In Automation testing 
+
+Code Reusability:
+Frameworks encourage writing reusable code, reducing redundancy and development time.
+
+Maintainability:
+Well-structured frameworks make it easier to maintain and update the test scripts.
+
+Scalability:
+Frameworks can be scaled to accommodate larger and more complex test suites.
+
+Efficiency:
+Frameworks automate repetitive tasks, freeing up time for more complex testing and analysis
+
+
+How to develop the Framework from the scratch 
+
+
+-> Create one MAVEN Project for build Management 
+
+-> Add the Required dependencies in POM.XML files(Project Object Model. External Markup Language 
+
+  -> TestNG - provides the Many Annotations and allows the data driven testing and provides the TestNG assertions 
+
+  -> Allure - for beautiful Html report
+
+  -> AssertJ - For Assertions 
+
+  -> Log4J for the Logging Mechanism
+
+  -> Apachi PoI - It will helps the DDT from the EXcel
+
+
+After adding the all required Dependencies we need to create the We Structured folder for Code Reusability and Maintainability
+
+Folder Structures are 
+
+	-> Base folders for CommanToAllPages which have the methods like EnterInput, ClickElement and getErrorText etc 
+
+	-> Driver Manager for Initializing and teardown the WebDriver Before and after the TC's 
+
+	-> Object Repositories for POM(Page Object Models) and PF(Page Factories) it have the Page Locaters and Action Methods
+
+	-> Resources for Storing the External Data Files like Data Properties and Excel files 
+
+	-> Utilities for property Reader class and Logging Mechanism
+
+	-> Listners for RetryMechnism
+
+	-> DDT folder for having script getting data From Excel file 
+

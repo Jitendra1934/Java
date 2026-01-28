@@ -1,0 +1,135 @@
+##############################How to find the all broken link in web page 
+
+
+List<WebElement> elements  = driver.findElemants(By.tagName("a");
+
+for(WebElement link : elements){
+
+	 String url = link.getAttribute("href");
+
+	if (url != null && !url.isEmpty()) {
+                brokenLink(url);
+            }
+
+	}
+
+
+
+
+ public static void brokenLink(String urlString) {
+
+	URL url = new URL(urlString);
+
+	HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+	
+	connection.setRequestMethod("HEAD");
+        connection.connect();
+
+	int statusCode = connection.getResponseCode();
+
+	if( statusCode > = 400 && statusCode < 600){
+
+		
+	 System.out.println("Broken Link: " + href + " - Status Code: " + statusCode);
+
+	}
+
+}
+
+
+
+
+1xx informational response ---------------------------------> 100 Series 
+
+2xx success ------------------------------------------------> 200 series
+
+3xx redirection---------------------------------------------> 300 Series
+
+4xx client errors ------------------------------------------> 400 series
+
+5xx server errors ------------------------------------------> 500 series 
+
+
+
+
+####### How to select the option in Drop Down using Selenium
+
+
+		WebElement element =  driver.findElement(by.xpath("Location of DD"));
+		
+		Select s = new Select(element);
+		
+		s.selectByVisibleText("Option1);
+
+		selectByIndex(int index): Selects an option by its index (0-based).
+		
+		deselectAll(): Deselects all selected options.
+
+		deselectByIndex(int index): Deselects an option by its index (0-based).
+
+		deselectByValue(String value)
+
+
+
+
+####### How to take the Screenshot using Java Selenium
+
+
+		File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+		FileUtils.copyFile(screenshot, new File("screenshot.png"));
+
+
+
+
+		
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
