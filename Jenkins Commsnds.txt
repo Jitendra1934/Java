@@ -1,0 +1,1 @@
+test -Dsurefire.suiteXmlFiles=LoginPomTestNg.xml

@@ -1,0 +1,1143 @@
+How to find the all broken link in web page 
+
+
+List<WebElement> elements  = driver.findElemants(By.tagName("a");
+
+for(WebElement link : elements){
+
+	 String url = link.getAttribute("href");
+
+	if (url != null && !url.isEmpty()) {
+                brokenLink(url);
+            }
+l
+	}
+
+ public static void brokenLink(String urlString) {
+
+	URL url = new URL(urlString);
+
+	HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+	
+	connection.setRequestMethod("HEAD");//optional only 
+        connection.connect();
+
+	int statusCode = connection.getResponseCode();
+
+	if( statusCode > = 400 && statusCode < 600){
+
+		
+	 System.out.println("Broken Link: " + href + " - Status Code: " + statusCode);
+
+
+	}
+
+}
+
+
+
+
+1xx informational response ---------------------------------> 100 Series 
+
+2xx success ------------------------------------------------> 200 series
+
+3xx redirection---------------------------------------------> 300 Series
+
+4xx client errors ------------------------------------------> 400 series
+
+5xx server errors ------------------------------------------> 500 series 
+
+
+
+
+How to select the option in Drop Down using Selenium
+
+
+		WebElement element =  driver.findElement(by.xpath("Location of DD"));
+		
+		Select s = new Select(element);
+		
+		s.selectByVisibleText("Option1);
+
+		selectByIndex(int index): Selects an option by its index (0-based).
+		
+		deselectAll(): Deselects all selected options.
+
+		deselectByIndex(int index): Deselects an option by its index (0-based).
+
+		deselectByValue(String value)
+
+
+
+
+
+Select class methods on Selenium WebDriver 
+
+
+
+-> selectByIndex(int index)
+
+-> selectByValue(String value)
+
+-> selectByVisibleText(String text)
+
+-> deselectAll()
+
+-> deselectByIndex(int index)
+
+-> deselectByValue(String value)
+
+-> deselectByVisibleText(String text)
+
+
+
+
+How to take the Screenshot using Java Selenium
+
+
+In Selenium 4 
+
+	WebDriver driver = new ChromeDriver();
+        // Navigate to webpage
+        driver.get("https://www.example.com");
+        // Take screenshot
+        File screenshot = driver.getScreenshotAs(OutputType.FILE);
+        // Save screenshot to file
+        FileUtils.copyFile(screenshot, new File("screenshot.png"));
+        // Close WebDriver
+        driver.quit();
+
+
+
+
+In Selenium 3 
+
+	WebDriver driver = new ChromeDriver();
+        // Navigate to webpage
+        driver.get("https://www.example.com");
+        // Take screenshot
+        File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        // Save screenshot to file
+        FileUtils.copyFile(screenshot, new File("screenshot.png"));
+        // Close WebDriver
+        driver.quit();
+
+
+
+
+Exceptions in Selenium WebDriver
+
+
+
+
+
+->NoSuchElementException 
+
+->ElementNotVisibleException
+
+->ElementNotSelectableException
+
+->TimeoutsException 
+
+->StaleElementReferenceException
+
+->NoAlertPresentException
+
+->NoSuchWindowException
+
+->NoSuchFrameException 
+
+->ElementNotInteractableException
+
+
+
+
+Expected conditions of WebDriverWait
+
+
+
+-> visibilityOfElementLocated
+
+-> invisibilityOfElementLocated
+
+-> elementToBeClickable
+
+-> elementToBeSelected
+
+-> textToBePresentInElement
+
+-> alertIsPresent
+
+
+
+
+
+
+
+
+
+What are the Important classes and interfaces in Selenium
+
+
+-> WebDriver Interface:
+
+	-> the main interface of selenium that provides the methods to interact with the browser 
+
+	-> methods like get(), findElement(), findElements(), quit()
+
+-> WebElement Interface:
+
+	-> Represent the HTML element on the web page 
+
+	-> Provides methods like click(), sendKeys(), getText(), getAttribute() etc.
+
+-> By Class:
+
+	-> Methods to specify the how to locate the HTML elements on the web page 
+
+	-> Methods like id(), name(), className(), cssSelector(), xpath() etc
+
+-> Actions Class:
+
+	-> Provides the methods for Mouse Movements, KeyBoard Interactions and Drag and drop operations.
+
+	-> moveToElements() ---------- Mouse Actions 
+	-> KeyDown() and KeyUp() ------------- KeyBoard Interactions 
+	-> DragAndDrop() ------------------- For files drag ang drop 
+
+-> Alert Interface:
+
+	-> Represents a JavaScript alert box on a web page.
+
+	-> Methods like accept(), dismiss(), getText() etc.
+
+-> Select Class:
+
+	-> Provides the methods for interacting Dropdowns and Multiple checkboxes 
+
+	-> Methods like selectByIndex(), selectByValue(), deselectAll(), selectByVisibleText() etc.
+
+-> WebDriverWait Class:
+
+	-> Provides the methods for waiting for certain conditions occure on the web page 
+
+	-> Methods like until(), withTimeout() etc.
+
+
+-> ExpectedConditions Class:
+
+	-> Provides pre-defined conditions for use with WebDriverWait.
+
+	-> Methods like visibilityOf(), invisibilityOf(), elementToBeClickable() etc
+
+
+
+
+
+Types Of Exceptions 
+
+
+
+	
+->NoSuchElementException 
+
+->ElementNotVisibleException
+
+->ElementNotSelectableException
+
+->TimeoutsException 
+
+->StaleElementReferenceException
+
+->NoAlertSuchPresent
+
+->NoSuchWindowException
+
+->NoSuchFrameException 
+
+
+
+
+
+
+
+->  DesiredCapabilities Class:
+
+	-> Used to specify the capabilities of a browser instance.
+
+	-> Methods like setBrowserName(), setVersion(), setPlatform() etc.
+
+->  Dimension Class:
+
+ 	-> Represents the size of a browser window or an element on a web page.
+
+	-> Methods like getWidth(), getHeight() etc.
+
+
+TestNG.XML is an XML file used to configure and run TestNG tests in Selenium WebDriver automation
+
+
+
+
+
+X-Path Methods
+
+
+
+
+By Tag Name: //input
+
+By Attribute: //input[@id='username']
+
+By Text: //button[text()='Submit']
+
+By Partial Text (contains): //a[contains(text(), 'Support')]
+
+Using and/or: //input[@type='text' and @name='username']
+
+Parent/Child/Sibling: //div[@id='parent']/input (child), //input[@id='child']/.. (parent), //input[@id='element1']/following-sibling::input
+
+
+
+
+Waits 
+
+
+-- What are the types of waits supported by WebDriver?
+
+
+driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+
+ WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
+ WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+
+
+Wait wait = new FluentWait(WebDriver reference).withTimeout(timeout, SECONDS).pollingEvery(timeout, SECONDS).ignoring(Exception.class);
+
+
+
+
+Element to Scroll 
+
+
+
+  JavascriptExecutor js = (JavascriptExecutor) driver;
+
+        // Find the element you want to scroll to
+        WebElement elementToScroll = driver.findElement(By.linkText("WebDriver BiDi")); // Replace with a real element on your test page
+
+        // Scroll the element into view
+        js.executeScript("arguments[0].scrollIntoView();", elementToScroll);
+ 	js.executeScript("window.scrollBy(0, -200)");
+
+
+
+
+Imp Points About the TestNG 
+
+
+TestNG (Test Next Generation) is an open-source testing framework for the Java programming language. It was created by Cédric Beust and is inspired by JUnit and NUnit, but it introduces several new functionalities that make it more powerful, flexible, and easier to use, especially for automation testing.
+
+
+
+Key Features of TestNG
+
+- Provide the Annotations - @test, @afterMethod, @BeforeMethod, @DataProvider 
+
+- Flexible Test Configuration - By using TestNG.Xml
+
+- Allows the Parallel testing 
+
+- Grouping of test Cases 
+
+- Allows The Data Driven Testing
+
+- Have Inbuilt Assertions 
+
+
+Some Importent Assertions 
+
+	- Assert.assertEqules(Actual, Expected, Message)
+	- Assert.assertEqales(Actual, Expected)
+
+	- Assert.assertTrue(true)
+	- Assert.assertFalse(true)
+
+	- Assert.asstNotNull(Object, mes)
+	- Assert.assertNull(Obj, mes)
+
+
+7/7/2025
+
+
+
+MVC clean Test
+
+clean will clear the target folder like old compilations, reports and many more 
+
+test will execute the test cases based on class names and @test Annotation 
+
+
+How to click the Enter or buttons in -----------------------Sendkeys(Keys.Enter);
+
+
+Ho to delete the all coockies in Selenium -----------------driver.manage().deleteAllCookies();
+
+
+Different ways to refresh the web page
+
+	driver.get(driver.getCurrentUrl())
+
+	driver.refresh();
+
+	Actions actions = new Actions(driver);
+
+		actions.senKeys(Keys.F5).build.perform();
+
+	driver.navigate.to();
+
+	
+
+How to locate the hidden elemenets in web page to avoid the ElementNotIntractable 
+
+
+	JavaScriptExecutor js = (JavaScriptExecutor)driver;
+
+	js.executeScript("document.getELementById("Id name").value('name"));
+
+	to enter the test use .value('name");
+
+
+--Js is a predefined Interface in Selenium
+
+
+
+-- Ajax calls are handles with the Waits concepts 
+
+
+-- Set the web browser window size 
+
+	Dimension d = new Dimension(300,699)
+
+	driver.manage().window().setWIndow(d);
+
+
+-- Parameter is used to take the input from the testNG.XML 
+
+	<Parametere name ="URL", value = "hypertlink"/>
+
+
+	@Test({"URL"})
+	p v s m(String Url){
+
+}
+
+
+-- Grouping tag 
+
+	@test( group ={"Smoke"}
+
+	 in TestNG.Xml File
+	
+	<Groups>
+
+		<run>
+			
+			<include name = "smoke"/>--------------------------------By using this we can run the grouped testcases 
+			<exclude name ="regression"/>----------------------------By using this we can exclude the grouped test cases 
+
+		</run>
+
+	</Groups>
+
+
+-- How to disable the chrome browser notifications 
+
+	
+	by using options classes 
+
+	ChromeOptions options =  new ChromeOptions();
+	options.addArguments("--disable-notifications);
+	
+	WebDriver driver = new ChromEDriver(options);
+
+
+it will disable the browser notifications 
+
+
+
+Cucumber Dependencies
+
+Cucumber Java
+ 
+ 	This is fundamental cucumber library that is enabled to write your step definitions in java.
+
+ 	This allows cucumber to understand and execute the your Gherkin feature files.
+
+Cucumber TestNG
+
+ 	TestNG have the many features like allows DDT, parallel execution, Test Configuration, Many annotations,
+
+ 	In Cucumber We have
+ 
+ 	@RunWith(Cucumber.class)
+ 	@CucumberOptions{// in the test runner class to specify the feature files, step definitions(glue code) and tags for filtering scenarios
+ 
+ 	Main advantage of cucumber TestNG is it allows the parallel execution
+
+
+}
+
+
+Selenium Java
+
+ 	Automation involves the interactions with the web browsers
+
+
+
+
+-- Cucumber is framework or a tool which supports the implementation of BDD in the Project 
+
+
+-- Cucumber Advantages 
+
+	Cucumber allows write scenerieos in Gherkin syntax which results into a human readable language 
+
+	Multi language support
+	support Code reusability 
+
+-- Files required to execute the Cucumber 
+
+	Feature file
+	Step Definitions 
+	
+--Language supported by Cucumber is Gherkin with the key word Given when and then And  
+
+
+-- Feature File 
+
+	In Cucumber project of we create the file with .feature is called feature file 
+
+	We can create the test Scenarios inside the Feature file using the Gherkin Syntax 
+
+-- Key Words in Feature file 
+
+	Feature, Scenario, Given, when, then, And, but, Scenario Outline, Examples 
+
+	| Data Table 
+
+	@ Tags
+
+	# Comments    
+
+	
+	
+-- What is Scenario Outline
+
+	Scenario Outline is Gherkin language keyword
+
+	Cucumber will understand the Gherkin language 
+
+ 	To Automate the Data Driven Testing in Cucumber we are using the Scenario Outline with the Examples 
+
+	
+-- Step Definitions 
+
+	Where we can develop the associated step definitions for feature files it consists of methods where each and every method is related to one or more steps in features files 
+
+	
+-- Tags arrangement in TestNG.xml file 
+
+	Suite - Test - Classes - class - Methods
+
+-- SoftAssert assert = new SoftAssert();
+
+	 it will continue execution even test case failed, unlike the Hard assertions 
+	
+	SoftAssert.assertEquest
+
+-- How to disable the Test method 
+
+	By using the Attribute Enabled = False
+
+	Bu using @ignore Annotation 
+
+-- Different reports in 
+
+	Default Email reports 
+
+	Default HTML Report 
+
+	Third party reports like, Extent or Allure reports 
+
+-- Various Ways to Invoke the TestNG
+
+	-IDE
+	-MVN 
+		-IDE
+		-CMD
+
+-- threadPoolSize attribute in TestNG 
+
+	It will alocate the multiple threads to the test method it reduce the execution time 
+
+-- TimeOut 
+
+	 it specified the with the time test method should be executed or otherwise it fails 
+
+-- Selenese is simple language it is used write the test scripts in Selenium IDE, Selenium is a set of commands, and commands are used to automate the web application 
+
+	 Actions, Accessors, Assertions 
+
+--Selenium Can't Automate the Windows Based Notifications, but by using third party tools AutoIT and Robot class we can handle the Windows Based Notifications
+
+-- We can Handle the Web Based pop up's using the getWindowandles() or getWindowHandles()
+
+
+
+
+07/08/2025
+
+-- Difference between the driver.get() and driver.navigate().to()
+
+
+driver.get()
+
+-- Part of the web driver interface 
+
+-- used to navigate to webpage and wait for to load the complete web page 
+
+-- does not track the browser history 
+
+-- doesn't support moving forward to the next page of web page 
+
+-- doesn't support the refresh web page 
+
+
+driver.navigate().to()
+
+-- Part of the web driver interface 
+
+-- Used to navigate the webpage and doesn't wait until to load complete web page 
+
+-- used to refresh the web page 
+
+-- track the browser history 
+
+-- support moving forward to the next page of web page after navigating back 
+
+
+
+##Selenium Components
+
+-- Selenium IDE 
+-- Selenium WebDriver 
+-- Selenium Grid
+
+##How does the Selenium Web Driver work
+
+--It interact with a web browser or a remote web server, it send commands to browser and retrieve the results 
+
+
+##How to create the Remote Web Driver class 
+
+-- WebDriver driver = new Remote WebDriver(new URL("").DesiredCapabilities.Chrome());
+
+##InvalidSelector Exception 
+
+-- when we use invalid selector to locate the element then we face InvalidSelector Exception 
+
+
+##How to get the Web Element Color
+
+-- getCssValue is used to get the color of the webElement 
+
+
+##Is it possible to scroll mouse wheel 
+
+-- yes, ScrollToElement, scrollByAmount 
+
+##how do you prevent web browser from thread defects 
+
+-- By Using 
+
+	Webdriver driver = ThreadGuard.protect(new ChromeDriver())
+
+##To perform click operation:
+------------------------------
+• JavaScriptExecutor js=(JavaScriptExecutor)driverRef;
+• js.executeScript("arguments[0].click()",webElementRef);
+
+
+
+70.What are the screenshot output type formats available?
+• OutputType.FILE
+• OutputType.BYTES
+• OutputType.BASE64
+
+
+71.What are the methods used for scrollUp and scrollDown ?
+• executeScript() method from JavaScriptExecutor is used to scrollup and scroll down.
+• arguments[0].scrollIntoView(true)------argument needs to be passed for scroll down operation
+• arguments[0].scrollIntoView(false)------argument needs to be passed for scroll up operation
+
+
+75.Write a code to print all the options in DropDown?
+• getOptions() method is used to get all options in dropdown.
+• getOptions() method will return List<WebElement> then iterating each WebElement and using 
+getText() method
+we can print all the dropdown values
+
+
+77.How to check the dropdown is single select or multi select dropdown?
+*isMultiple() method from Select class can be used to check whether the dropdown is single select
+or multi select dropdown
+
+
+78.What are the methods available in select class?
+• selectByValue();
+• selectByVisibleText();
+• selectByIndex();
+• getOptions();
+• getAllSelectedoptions();
+• getFirstselectedoptions();
+• isMultiple();
+• deSelectByValue();
+• deSelectByVisibleText();
+• deSelectByIndex();
+• deSelectAll()
+
+
+ 80.Write a code to print selected options in dropdown?
+*By using getAllSelectedoptions() method we can get all the selected WebElements.
+Select refName = new Select();
+refName.getAllSelectedoptions();
+*getAllSelectedoptions() method will return List<WebElement> then iterating each WebElement and 
+using getText() method
+we can print all the selected options from dropdown
+
+
+82.What is the purpose of windows Handling?
+*Whenever we have multiple windows,to switch the program control between different windows,
+you can go for windows handling concept in Selenium.
+We can perform switch the control between windows in 3 ways:
+• using window title
+• using window url
+• using window id
+83.Write a method used to get the window id of all the windows opened?
+*Set<String> refname= driverRefName.switchTo.getWindowsHandles();
+84.What are the different types of arguments you can pass in windows()?
+• id
+• url
+• title
+But all the arguments are of String type
+
+
+
+85.When you have multiple windows opened ,how to directly switch from parent window to 8 th 
+child window?
+List<String> allWindowsId=(List<String>)driver.getWindowHandles();
+driver.SwitchTo().window(allWindowsId.get(7));
+
+
+
+93.Write a method to print the first selected option in drop down?
+• getFirstSelectedOption() method used to get the first selected option from drop down.
+• It returns Single WebElement.
+• From the WebElement we can get the text using getText() method.
+
+
+94.What is mean by alert?
+• Alert is an information box displayed in the webpage to give some information to the user.
+• When any Alert present in the webpage,without handling the alert user cannot do the next
+operation in the webpage.
+• To handle the alert,we have Alert interface inteface in Selenium.
+
+
+95.What are the methods available in Alert?
+• accept()
+• dismiss()
+• sendkeys()
+
+
+
+07/09/2025
+
+Q.56. How can we capture screenshots in selenium?
+Ans. Using getScreenshotAs method of TakesScreenshot interface we can take the screenshots in 
+selenium.
+File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE); 
+FileUtils.copyFile(scrFile, new File("D:\\testScreenShot.jpg"));
+
+
+
+-- Default content()  --- returns the control to the main web page 
+
+-- parant frame () -- return the control to immediate parent frame of current frame 
+
+-- what are the elements can we pass in frames----------Name, id, webelement, index
+
+##What is the purpose of isDisplayed(),isSelected(),isEnabled()
+
+--  isDisplayed ---- isDisplayed is a method is used check the web element is visible or not in the web page  
+
+WebElement errorMessage = driver.findElement(By.id("errorMsg"));
+if (errorMessage.isDisplayed()) {
+    System.out.println("Error message is visible.");
+} else {
+    System.out.println("Error message is not visible.");
+}
+
+
+-- isSelected -- isSelected is a medthod to check the WebElement is selected is selected or not, it is mainly applicable to Checkboxes, radio buttons, Options with in a Select tag 
+
+
+WebElement rememberMeCheckbox = driver.findElement(By.id("rememberMe"));
+if (rememberMeCheckbox.isSelected()) {
+    System.out.println("Remember me checkbox is already selected.");
+} else {
+    rememberMeCheckbox.click(); // Select it if not already selected
+    System.out.println("Remember me checkbox is now selected.");
+}
+
+
+--isEnabled() --- is used to check weather the Web Element is enabled or not to interact 
+
+	true if the element is enabled.
+
+	false if the element is disabled.
+
+WebElement submitButton = driver.findElement(By.id("submitBtn"));
+if (submitButton.isEnabled()) {
+    submitButton.click();
+    System.out.println("Submit button is enabled and clicked.");
+} else {
+    System.out.println("Submit button is disabled.");
+}
+
+
+
+103.What is the use of getCssValue() method?
+
+
+To get the value of a given CSS property of a WebElement such as font color,alignment,size etc
+
+7 How to do drag and drop in selenium?
+Ans. Using Action class, drag and drop can be performed in selenium. Sample codeActions act = new Actions(driver);
+act.clickAndHold(sourceElement).moveToElement(targetElement).release().build()
+.perform();
+OR
+act.dragAndDrop(source Element, target Element).build().perform();
+
+
+
+Q.74. What is Page Factory?
+Ans. Page factory is an implementation of Page Object Model in selenium. It provides @FindBy 
+annotation to find web elements and PageFactory.initElements() method to initialize all 
+web elements defined with @FindBy annotation.
+Selenium InterviewQuestions and Answers
+13
+public class SamplePage
+{
+WebDriver driver;
+@FindBy(id="search")
+WebElement searchTextBox;
+@FindBy(name="searchBtn")
+WebElement searchButton;
+//Constructor public samplePage(WebDriver driver)
+{
+this.driver = driver; //initElements method to initialize all 
+elements
+PageFactory.initElements(driver, this);
+}
+//Sample method
+public void search(String searchTerm)
+{
+searchTextBox.sendKeys(searchTerm); searchButton.click(); 
+
+}
+
+Q.81. What is a hub in selenium grid?
+Ans. A hub is server or a central point in selenium grid that controls the test executions on the 
+different machines.
+Q.82. What is a node in selenium grid?
+Ans. Nodes are the machines which are attached to the selenium grid hub and have selenium 
+instances running the test scripts. Unlike hub there can be multiple nodes in selenium grid
+
+
+
+
+Some of the common assertions provided by testNG are1. assertEquals(String actual, String expected, String message) - (and other 
+overloaded data type in parameters)
+2. assertNotEquals(double data1, double data2, String message) - (and other 
+overloaded data type in parameters)
+3. assertFalse(boolean condition, String message)
+4. assertTrue(boolean condition, String message)
+5. assertNotNull(Object object)
+6. fail(boolean condition, String message)
+7. true(String message) 
+
+
+Q.152. What is the super interface of WebDriver?
+Ans. SearchContext	 	
+
+
+
+--------------------------------------------------------------------------------CORE JAVA INTERVIEW QUESTIONS---------------------------------------------------------------------
+
+
+
+9.What are the coding Standard used in java?
+• Pascal notation: Every word's first letter ,must be a capital letter
+• Example:GreensTechnology
+• Camel notation: First word's first letter should be a small letter, all the other suceeding word's 
+first letter should be a capital letter.
+• Example:greensTechnolog
+
+
+
+
+11.What is mean by Encapsulation?
+• It is the structure of creating folders.
+• It wraps the data and code acting on data together in to a single unit.
+• Example of encapsulation is POJO class.
+• It is otherwise called Data hiding.
+
+
+
+14.What is mean by Wrapper class?
+• Classes of data types is called wrapper class.
+• It is used to convert any data type into an object.
+• All classes and wrapper classes default value is null
+
+
+
+07/10/2025
+
+
+What is the difference between scenario & scenario outline?
+When we have single scenario and we need to run it one time at that place we use Scenario.
+If you want some parametrization or Data Driven testing at that time, we can use scenario outline where 
+we have to use Example keyword like if we are running this scenario for 3 different data set like username 
+& pass. so, it will run 3 times.
+
+
+• Can you tell me more about Background Keyword?
+Background is used when we have some common Given part. Suppose we have pre-condition that we 
+have to check this before each scenario. so in order to avoid rewriting same step we can write it in 
+Background. 
+
+
+• What is the use of Dry Run in cucumber?
+Dry run is not running our whole application it will check whether all features are mapped with Step 
+definition.
+
+
+Apart from sendkeys, are there any different ways, to type content onto the editable field?
+WebDriver driver = new FirefoxDriver();
+JavascriptExecutor executor = (JavascriptExecutor)driver;
+executor.executeScript("document.getElementById("textbox_id").value='new value';);
+
+
+
+Annotations in Cucumber
+Total 11 Annotations -Feature, Scenario, Background, given, when , then, and, but, example, scenario 
+outline, scenario template
+
+
+ 
+• boolean equalsIgnoreCase()  -- is used to compare the 2 strings wrt to case sensitive 
+
+
+== is used to compare two strings 
+
+ equals()
+
+
+-- compareTo    return -1//Strings not equal or return 0//if strings are equal
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+07/11/2025
+
+We Can Rerun the failed test cases in Java Selenium using the IRetryAnalyzer(retry analyzer has the retry method with the Boolean return type)interface and IAnnotationTransformer(IAnnotationTransformer have the transform method )interfaces 
+
+public class RetryAnylyzer implements IRetryAnalyzer{
+
+public int reTry_count=0;
+
+public void max_count = 3;
+
+
+@Override 
+public boolean retry(ITestResult result){
+
+if(min_count < max_count){
+
+retry++;
+return true;
+}
+
+return false;
+
+}
+
+
+
+
+public class RetryListener implements IAnnotationTransformer{
+
+	public void transform(ITestAnnotation annotation, Class testClass, Method testMethod){
+
+		annotation.setsetRetryAnalyzer(RetryAnylyzer.class)
+	
+	}
+
+}
+
+
+Run scenarios tagged with @Smoke OR @Sanity:
+
+
+@CucumberOptions(
+    features = "src/test/resources/features",
+    glue = "com.example.stepdefinitions",
+    tags = "@Smoke or @Sanity"
+)
+
+
+@CucumberOptions(
+    features = "src/test/resources/features",
+    glue = "com.example.stepdefinitions",
+    tags = "not @WIP"
+)
+
+
+
+
+Second highest salary of employees table 
+
+
+Select max(salary) as secondHighestSalary from employees 
+Where salary <(select max(salary) from table employees)
+
+
+
+
+These are the building blocks of your feature files. They are not Java annotations.
+
+Feature: Defines the overall functionality or area under test.
+
+Example: Feature: User Login Functionality
+
+Scenario: Describes a single, specific example of how the feature works.
+
+Example: Scenario: Successful Login with Valid Credentials
+
+Background: Used to define a set of steps that are common to all scenarios within a feature. It runs before each scenario but after any @Before hooks.
+
+Example:
+
+Gherkin
+
+Background:
+  Given User is on the homepage
+Given: Defines the initial context or pre-conditions.
+
+Example: Given I am on the login page
+
+When: Describes the action or event.
+
+Example: When I enter "username" and "password"
+
+Then: Describes the expected outcome or post-condition.
+
+Example: Then I should be redirected to the dashboard
+
+And: Used to combine multiple Given, When, or Then steps for better readability without repeating the keyword.
+
+Example: Given I am on the login page And I have an active internet connection
+
+But: Similar to And, but usually used to express a contrasting condition.
+
+Example: Given I am on the login page But my account is locked
+
+Scenario Outline: (Also known as Scenario Template) Allows you to run the same scenario multiple times with different sets of data. It uses placeholders in the steps.
+
+Example:
+
+Gherkin
+
+Scenario Outline: Login with various credentials
+  Given I am on the login page
+  When I enter <username> and <password>
+  Then I should see <message>
+
+  Examples:
+    | username | password | message              |
+    | user1    | pass1    | "Welcome, user1!"    |
+    | user2    | pass2    | "Invalid Password!"  |
+Examples: (Or Scenarios) This keyword is always used in conjunction with Scenario Outline to provide the data sets.
+
+Example: (See above under Scenario Outline)
+
+B. Java Annotations (Used in .java step definition files):
+
+These are the actual "annotations" in the Java sense, defined by the Cucumber library, and are used to link the Gherkin steps to your Java methods.
+
+@Given (from io.cucumber.java.en.Given)
+
+@When (from io.cucumber.java.en.When)
+
+@Then (from io.cucumber.java.en.Then)
+
+@And (from io.cucumber.java.en.And)
+
+@But (from io.cucumber.java.en.But)
+
+@Before (from io.cucumber.java.Before)
+
+@After (from io.cucumber.java.After)
+
+@BeforeStep (from io.cucumber.java.BeforeStep)
+
+@AfterStep (from io.cucumber.java.AfterStep)
+
+@ParameterType (from io.cucumber.java.ParameterType)
+
+@DataTableType (from io.cucumber.java.DataTableType)
+
+In summary:
+
+Feature, Scenario, Background, Scenario Outline, Examples, Given, When, Then, And, But (and their variations) are Gherkin keywords used to write your test scenarios in plain language in .feature files.
+
+The @Given, @When, @Then, @And, @But, @Before, @After, @BeforeStep, @AfterStep, @ParameterType, @DataTableType are Java annotations that connect these Gherkin steps and manage test execution flow in your Java code.
+
+So, while your list includes 11 terms crucial to Cucumber, only a subset of them are true Java Annotations in the programming sense. The others are Gherkin syntax elements.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
