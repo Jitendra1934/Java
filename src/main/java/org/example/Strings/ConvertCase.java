@@ -27,6 +27,11 @@ public class ConvertCase {
                 }
             }
         }
+        System.out.println("output "+s1);
+    }
 
-        System.out.println("output "+s1);    }
+    public String caseConvert(){
+        //logic to implement the code
+        return null;
+    }
 }
