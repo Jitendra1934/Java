@@ -1,4 +1,4 @@
-//Read the Array
+git pull origin main//Read the Array
 
 class Main {
     public static void main(String[] args) {
