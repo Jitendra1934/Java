@@ -32,6 +32,11 @@ public class ConvertCase {
                 }
             }
         }
-        return s1;
+        System.out.println("output "+s1);
+    }
+
+    public String caseConvert(){
+        //logic to implement the code
+        return null;
     }
 }
