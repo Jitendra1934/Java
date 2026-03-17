@@ -9,6 +9,11 @@ public class ConvertCase {
 
         String s="HexAwarE";
         System.out.println("input "+s);
+        String s1 = casechange(s);
+        System.out.println(s1);
+        }
+
+    public static String casechange(String s){
         String s1="";
 
         for(int i=0;i<s.length();i++){
@@ -22,7 +27,7 @@ public class ConvertCase {
                     s1=s1+ch;
                 }
                 else{
-                   ch = Character.toLowerCase(ch);
+                    ch = Character.toLowerCase(ch);
                     s1=s1+ch;
                 }
             }
