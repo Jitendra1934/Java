@@ -7,7 +7,7 @@ public class RemoveDuplicateArray {
 */
         public static void main(String[] args) {
 
-            int[] a ={1,2,4,7,5,3,6,8,4,3,6,8,4,3,5,7,4,4,6};
+            int[] a ={1,2,7,5,3,5,4,3,2,5,7,8};
 
             // need to sort the array
 
