@@ -1,5 +1,7 @@
 package org.example.Arrays;
 
+import java.util.Arrays;
+
 public class RemoveDuplicateArray {
 
 /*
@@ -7,29 +9,16 @@ public class RemoveDuplicateArray {
 */
         public static void main(String[] args) {
 
-            int[] a ={1,2,4,7,5,3,6,8,4,3,6,8,4,3,5,7,4,4,6};
+            //upcoming my change is   int[] a ={1,2,3,4,5,6,7,8};
+            int[] a ={1,2,3,4,4,5,6,7,8};
 
             // need to sort the array
 
-            for(int i=0;i<a.length;i++){
+            Arrays.sort(a);
 
-                int temp;
-
-                for(int j=i+1;j<a.length;j++){
-
-                    if(a[i]>a[j]){
-                        temp=a[i];
-                        a[i]=a[j];
-                        a[j]=temp;
-                    }
-                }
-
-            }
-
-           /* for(int b : a){
-                System.out.print(b+" ");
-            }
-*/
+          /*  for(int b : a){
+                System.out.println(b+" ");
+            }*/
             int k=1;
 
             for(int i=0;i<a.length-1; i++){
